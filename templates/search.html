@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SearchEngine</title>
+    </head>
+    <body>
+        <h1>Your search results for the query: " {{ rev }} "</h1>
+        
+        <form action='search' method='get'>
+            <input type="text" name='rev' placeholder= "{{ rev }}" >
+            <input type="submit" value="Send">
+        </form>
+
+        <ul>
+            {% for item in result %}
+            <li> {{ item }} </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
+
+
+
