@@ -2,11 +2,14 @@
 <html>
     <head>
         <title>SearchEngine</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/x-icon">
     </head>
     <body>
-        <h1>Your search results for the query: " {{ rev }} "</h1>
+        <a href={{ url_for('start') }} id="AppsName"><h1>erasmuSearcher</h1></a>
+        <h2>Your search results for the query: " {{ rev }} "</h2>
         
-        <form action='search' method='get'>
+        <form id="CenterdForm" action='search' method='get'>
             <input type="text" name='rev' placeholder= "{{ rev }}" >
             <input type="submit" value="Send">
         </form>

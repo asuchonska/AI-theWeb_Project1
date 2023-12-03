@@ -1,0 +1,19 @@
+#AppsName {
+    color: rgba(0, 0, 255, 0.729);
+    font-style: bold;
+    text-decoration: double;
+    text-align: center;
+    font-size: 2.5em ;
+}
+
+h2 {
+    font-size: large;
+    font-style: italic;
+    text-align: center;
+}
+
+#CenterdForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
