@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from crawler import index, search 
 
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -14,10 +15,14 @@ def search_results():
     else:
     #getting the input
         rev = request.args['rev']
-    #tokenizing it
     
     #pulling out the tokenized words from index
         result = search (index, rev)
+        filtered_results = []
+        for i in result: 
+            if i not in filtered_results:
+                filtered_results.append(i)
+            
     #printing out the results
-        return render_template('search.html', result = result, rev = rev)
+        return render_template('search.html', result = filtered_results, rev = rev)
         
