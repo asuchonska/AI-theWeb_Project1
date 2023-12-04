@@ -6,7 +6,7 @@
         <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/x-icon">
     </head>
     <body>
-        <a href={{ url_for('start') }} id="AppsName"><h1>erasmuSearcher</h1></a>
+        <a href={{ url_for('start') }} id="AppsName"><h1>uniSearcher</h1></a>
         <h2>Your search results for the query: " {{ rev }} "</h2>
         
         <form id="CenterdForm" action='search' method='get'>
@@ -17,8 +17,8 @@
         <ul>
             {% for item in result %}
                 <li>
-                    <a href={{ item }}><h3>The Title</h3></a>
-                    <div>The sentence</div>
+                    <a href={{ item }}><h3>Search Result {{ loop.index }}</h3></a>
+                    <div>{{ item }}</div>
                 </li>
             {% endfor %}
         </ul>
